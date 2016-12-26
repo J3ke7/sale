@@ -428,3 +428,11 @@ table.dataTable thead .sorting:after {
 .progress-bar.progress-bar-striped.active {
     width: 0%;
 }
+
+.edit-category {
+    margin: 20px 50px;
+}
+
+.add-category {
+    margin: 10px 180px 20px;
+}

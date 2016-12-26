@@ -2,7 +2,7 @@
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a href="#">
+                <a href="{!! route('admin.category.index') !!}">
                     @lang('text.menu_item_category')<span class="fa arrow"></span>
                 </a>
             </li>

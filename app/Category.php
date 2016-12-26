@@ -7,7 +7,14 @@ use App\Product;
 
 class Category extends Model
 {
+    protected $table = 'categories';
+
     protected $fillable = ['name'];
+
+    public function scopeSearchByName($query, $name)
+    {
+        return $query->where('name', 'like', '%' . $name . '%');
+    }
 
     public function products()
     {
