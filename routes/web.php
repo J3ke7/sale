@@ -15,3 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function() {
+    Route::resource('category', 'CategoryController', ['except' => 'show']);
+
+    Route::get('category/search', ['as' => 'category.search', 'uses' => 'CategoryController@search']);
+});
