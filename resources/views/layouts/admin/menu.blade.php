@@ -3,7 +3,12 @@
         <ul class="nav" id="side-menu">
             <li>
                 <a href="{!! route('admin.category.index') !!}">
-                    @lang('text.menu_item_category')<span class="fa arrow"></span>
+                    @lang('text.menu_item_category')
+                </a>
+            </li>
+            <li>
+                <a href="{!! route('admin.product.index') !!}">
+                    @lang('admin.product')
                 </a>
             </li>
         </ul>

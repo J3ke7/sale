@@ -12,7 +12,7 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $category = [
-            'Đặc sản bắc bộ',
+            'Đặc sản Bắc Bộ',
             'Đặc sản Nam Trung Bộ',
             'Đặc sản Bắc Trung Bộ',
             'Đặc sản Nam Bộ',
