@@ -15,6 +15,8 @@ return [
     'local' => 'Local',
     'image' => 'Image',
     'description' => 'Description',
+    'user' => 'User',
+    'email' => 'Email',
 
     'label' => [
         'index' => 'Index',

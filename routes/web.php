@@ -23,4 +23,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
     Route::resource('product', 'ProductController', ['except' => 'show']);
 
     Route::get('product/search', ['as' => 'product.search', 'uses' => 'ProductController@search']);
+
+    Route::resource('user', 'UserController', ['only' => ['index', 'destroy']]);
+
+    Route::get('user/search', ['as' => 'user.search', 'uses' => 'UserController@search']);
 });
