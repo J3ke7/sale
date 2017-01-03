@@ -33,4 +33,12 @@ class UserController extends Controller
             'flash_message' => Lang::get('admin.message.delete_success')
         ]);
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+        $users = User::searchByName($search)->paginate(config('view.paginate'));
+
+        return view('admin.user.index', compact('users'));
+    }
 }
