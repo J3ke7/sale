@@ -28,3 +28,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
 
     Route::get('user/search', ['as' => 'user.search', 'uses' => 'UserController@search']);
 });
+
+Route::get('/home', 'HomeController@index');
