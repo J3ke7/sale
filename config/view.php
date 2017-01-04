@@ -32,4 +32,10 @@ return [
 
     'paginate' => 5,
 
+    'status' => [
+        0 => 'Chưa thanh toán',
+        1 => 'Đã thanh toán',
+        2 => 'Hủy đơn hàng'
+    ],
+
 ];

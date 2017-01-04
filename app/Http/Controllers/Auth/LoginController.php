@@ -50,6 +50,5 @@ class LoginController extends Controller
             }
             return redirect('/');
         }
-        return back()->with('warning', Lang::get('login.login.wrong'));
     }
 }

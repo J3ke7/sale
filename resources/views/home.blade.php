@@ -16,6 +16,8 @@
     </div>  
 </section>
 
+<div class="col-lg-12" style="text-align: center;">@include('shared.flash')</div>
+
 <section class="callaction">
     <div class="container">
         <div class="row">

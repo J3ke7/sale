@@ -26,7 +26,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin'],
 
     Route::resource('user', 'UserController', ['only' => ['index', 'destroy']]);
 
+    Route::resource('order', 'OrderController', ['only' => ['index', 'destroy']]);
+
     Route::get('user/search', ['as' => 'user.search', 'uses' => 'UserController@search']);
+});
+
+Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => 'auth'], function() {
+    Route::resource('cart', 'CartController', ['only' => ['index']]);
+
+    Route::get('addItem/{id}', ['as' => 'cart.addItem', 'uses' => 'CartController@getAddItem']);
+
+    Route::get('deleteItem/{id}', ['as' => 'cart.deleteItem', 'uses' => 'CartController@getDeleteItem']);
+
+    Route::get('addOrder', ['as' => 'order.addOrder', 'uses' => 'OrderController@getAddOrder']);
 });
 
 Route::resource('product', 'ProductController', ['only' => ['index', 'show']]);

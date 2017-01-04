@@ -17,6 +17,12 @@ return [
     'description' => 'Description',
     'user' => 'User',
     'email' => 'Email',
+    'order_code' => 'Order code',
+    'user' => 'User',
+    'status' => 'Status',
+    'total' => 'Total Price',
+    'order' => 'Order',
+    'created_at' => 'Create at',
 
     'label' => [
         'index' => 'Index',
@@ -39,5 +45,6 @@ return [
         'not_found' => 'Not found',
         'holder' => 'Please Enter :name',
         'choose' => '--Please Choose :name',
+        'thank_you' => 'Cảm ơn qúy khách đã mua sản phẩm của chúng tôi'
     ],
 ];
