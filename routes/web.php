@@ -13,7 +13,9 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin'], 
+    'namespace' => 'Admin', 'as' => 'admin.'], function() {
+
     Route::resource('category', 'CategoryController', ['except' => 'show']);
 
     Route::get('category/search', ['as' => 'category.search', 'uses' => 'CategoryController@search']);
@@ -28,3 +30,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
 });
 
 Route::resource('product', 'ProductController', ['only' => ['index', 'show']]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
