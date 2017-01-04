@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function() {
     Route::resource('category', 'CategoryController', ['except' => 'show']);
@@ -29,4 +27,4 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
     Route::get('user/search', ['as' => 'user.search', 'uses' => 'UserController@search']);
 });
 
-Route::get('/home', 'HomeController@index');
+Route::resource('product', 'ProductController', ['only' => ['index', 'show']]);
