@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>@lang('text.admin_title')</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <title>@lang('text.admin_title')</title>
     {!! Html::style('css/app.css') !!}
     {!! Html::script('js/app.js') !!}
     <link href="{{ asset('admin/css/admin.css') }}" rel="stylesheet">

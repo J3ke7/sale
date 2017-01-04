@@ -15,8 +15,20 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{!! route('home') !!}">Trang chủ</a></li>
                     <li><a href="{!! route('product.index') !!}">Đặc sản</a></li>
-                    <li><a href="">Đăng nhập</a></li>
                     <li><a href="">Giỏ hàng</a></li>
+                    @if (Auth::guest())
+                        <li><a href="{!! route('login') !!}">Đăng nhập</a></li>
+                    @else
+                        <li><a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            Đăng xuất
+                        </a></li>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    @endif
                 </ul>
             </div>
         </div>
