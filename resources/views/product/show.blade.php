@@ -28,7 +28,7 @@
                             {!! number_format($product->price) !!} đồng
                         </h3>
                         <h5 style="margin: 10px 120px;">
-                            <a href="">Mua ngay</a>
+                            <a href="{!! route('user.cart.addItem', $product->id) !!}">Mua ngay</a>
                         </h5>
                     </div>
 

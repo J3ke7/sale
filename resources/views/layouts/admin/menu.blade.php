@@ -16,6 +16,11 @@
                     @lang('admin.user')
                 </a>
             </li>
+            <li>
+                <a href="{!! route('admin.order.index') !!}">
+                    @lang('admin.order')
+                </a>
+            </li>
         </ul>
     </div>
 </div>
