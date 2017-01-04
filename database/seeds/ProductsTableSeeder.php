@@ -14,7 +14,7 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([
             'name' => 'Bánh đậu xanh',
             'code' => str_random(5),
-            'image' => '',
+            'image' => 'banhdauxanh.jpg',
             'price' => 100000,
             'quantity' => 20,
             'local' => 'Hải Dương',
@@ -25,7 +25,7 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([
             'name' => 'Nem chua',
             'code' => str_random(5),
-            'image' => '',
+            'image' => 'nemchua.jpg',
             'price' => 100000,
             'quantity' => 20,
             'local' => 'Thanh Hóa',
@@ -36,11 +36,33 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([
             'name' => 'Bánh đa cua',
             'code' => str_random(5),
-            'image' => '',
+            'image' => 'banhdacua.jpg',
             'price' => 100000,
             'quantity' => 20,
             'local' => 'Hải Phòng',
             'description' => 'Là món ăn nổi tiếng của Hải Phòng',
+            'category_id' => 3
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Chả cá lá vọng',
+            'code' => str_random(5),
+            'image' => 'chacalavong.jpeg',
+            'price' => 100000,
+            'quantity' => 20,
+            'local' => 'Hà Nội',
+            'description' => 'Là món ăn nổi tiếng của Hà Nội',
+            'category_id' => 3
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Chả mực Hạ Long',
+            'code' => str_random(5),
+            'image' => 'chamuchalong.jpeg',
+            'price' => 100000,
+            'quantity' => 20,
+            'local' => 'Hạ Long',
+            'description' => 'Là món ăn nổi tiếng của Hạ Long',
             'category_id' => 3
         ]);
     }

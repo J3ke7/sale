@@ -19,6 +19,8 @@
     {{ Html::script('/bower_components/jquery/dist/jquery.min.js') }}
     {{ Html::script('/bower_components/bootstrap/dist/js/bootstrap.min.js') }}
 
+    <link href="{{ asset('user/css/user.css') }}" rel="stylesheet">
+
     <link href="{{ asset('user/css/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
     <link href="{{ asset('user/css/jcarousel.css') }}" rel="stylesheet">
     <link href="{{ asset('user/css/jcarousel.css') }}" rel="stylesheet">
